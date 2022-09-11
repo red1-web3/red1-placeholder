@@ -6,12 +6,10 @@ function Skills() {
     <section>
       <div className="container flex justify-between">
         <div className="space-y-5">
-          <h1 className="leading-none tracking-wide uppercase font-title pl-24 __titleTxt">
-            Skills
-          </h1>
+          <h1 className="__titleTxt">Skills</h1>
 
-          <div className="container-sm space-y-16">
-            <div className="space-y-5">
+          <div className="container-sm space-y-24">
+            <div className="space-y-5 w-[60%]">
               <div className="flex items-center gap-5">
                 <h2 className="text-7xl font-primary h-32 relative flex items-center justify-center aspect-square border-2 border-black leading-none">
                   <span className="translate-y-1.5">F</span>
@@ -35,11 +33,17 @@ function Skills() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-14">
+            <div className="__columnGrid">
               <div className="space-y-5">
-                <div className="border-2 border-black flex items-center justify-center py-5">
-                  <div className="opacity-80">
-                    <DesignIcon />
+                <div className="flex items-center flex-col justify-center grow">
+                  <span className="self-start font-second text-sm !mb-1">
+                    Fig 2.
+                  </span>
+                  <div className="group relative hover:border-[#ba8d24] duration-300 border-2 border-black py-4 w-full h-full flex justify-center items-center">
+                    <div className="opacity-70 group-hover:scale-105 ease-in-out duration-300">
+                      <DesignIcon />
+                    </div>
+                    <span className="absolute inset-0 w-full h-full bg-[#ffc743]/0 group-hover:bg-[#ffc743]/10 duration-300"></span>
                   </div>
                 </div>
                 <h3 className="font-primary text-3xl">Design</h3>
@@ -57,9 +61,15 @@ function Skills() {
                 </p>
               </div>
               <div className="space-y-5 mt-28">
-                <div className="border-2 border-black flex items-center justify-center py-5">
-                  <div className="opacity-80">
-                    <Development />
+                <div className="flex items-center flex-col justify-center grow">
+                  <span className="self-start font-second text-sm !mb-1">
+                    Fig 3.
+                  </span>
+                  <div className="group relative hover:border-[#ba8d24] duration-300 border-2 border-black py-4 w-full h-full flex justify-center items-center">
+                    <div className="opacity-70 group-hover:scale-105 ease-in-out duration-300">
+                      <Development />
+                    </div>
+                    <span className="absolute inset-0 w-full h-full bg-[#ffc743]/0 group-hover:bg-[#ffc743]/10 duration-300"></span>
                   </div>
                 </div>
                 <h3 className="font-primary text-3xl">Development</h3>
@@ -82,9 +92,11 @@ function Skills() {
           </div>
         </div>
 
-        <div className="flex items-center gap-10 flex-col mt-[75px]">
-          <p className="rotate-90 font-second whitespace-pre">Learn More</p>
-          <div className="h-full w-0.5 bg-black"></div>
+        <div className="flex items-center flex-col mt-[75px] relative">
+          <p className="rotate-90 font-second whitespace-pre absolute top-0 -left-10">
+            Learn More
+          </p>
+          <div className="h-full mt-16 w-0.5 bg-black relative before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before::h-2 before:aspect-square before:rounded-full before:bg-black before:p-1.5"></div>
         </div>
       </div>
     </section>

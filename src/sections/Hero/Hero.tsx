@@ -2,30 +2,33 @@ import HeroIcon from "../../components/icons/HeroIcon";
 
 function Hero() {
   return (
-    <section className="flex justify-center items-center h-full">
-      <div className="container grid grid-cols-[100px,260px,450px] gap-24 w-fit">
-        <ul className="space-y-1.5">
-          <li style={{ fontFamily: "cursive" }} className="opacity-90 !mb-3">
-            External
-          </li>
-          <li className="font-primary tracking-wider text-xl relative __navigationEffect">
-            <a href="#">Facebook</a>
-          </li>
-          <li className="font-primary tracking-wider text-xl relative __navigationEffect">
-            <a href="#">Instagram</a>
-          </li>
-          <li className="font-primary tracking-wider text-xl relative __navigationEffect">
-            <a href="#">Youtube</a>
-          </li>
-        </ul>
+    <section className="h-full">
+      <div className="container grid gap-28 grid-cols-[460px,480px]">
+        <div className="flex gap-14">
+          <ul className="space-y-1.5">
+            <li style={{ fontFamily: "cursive" }} className="opacity-90 !mb-3">
+              External
+            </li>
+            <li className="font-primary tracking-wider text-xl relative __navigationEffect">
+              <a href="#">Facebook</a>
+            </li>
+            <li className="font-primary tracking-wider text-xl relative __navigationEffect">
+              <a href="#">Instagram</a>
+            </li>
+            <li className="font-primary tracking-wider text-xl relative __navigationEffect">
+              <a href="#">Youtube</a>
+            </li>
+          </ul>
 
-        <div className="flex items-center flex-col justify-center">
-          <div className="border-2 border-black py-4 w-full h-full flex justify-center items-center">
-            <div className="opacity-70">
-              <HeroIcon />
+          <div className="flex items-center flex-col justify-center grow">
+            <div className="group relative hover:border-[#ba8d24] duration-300 border-2 border-black py-4 w-full h-full flex justify-center items-center">
+              <div className="opacity-70 group-hover:scale-105 ease-in-out duration-300">
+                <HeroIcon />
+              </div>
+              <span className="absolute inset-0 w-full h-full bg-[#ffc743]/0 group-hover:bg-[#ffc743]/10 duration-300"></span>
             </div>
+            <span className="self-start font-second text-sm">Fig 1.</span>
           </div>
-          <span className="self-start font-second text-sm">Fig I.</span>
         </div>
 
         <article className="flex items-end">

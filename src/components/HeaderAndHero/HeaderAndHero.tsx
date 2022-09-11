@@ -3,7 +3,7 @@ import Hero from "../../sections/Hero";
 
 function HeaderAndHero() {
   return (
-    <div className="space-y-12">
+    <div className="space-y-20">
       <Header />
       <Hero />
     </div>

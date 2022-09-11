@@ -6,7 +6,9 @@ function Header() {
       <div className="container flex items-center justify-between">
         <div className="flex flex-col items-center">
           <a href="#" className="text-[44px] tracking-wide">
-            Red1 Placeholder
+            {[..."Red1 Placeholder"].map((letter, i) => (
+              <span key={i}>{letter}</span>
+            ))}
           </a>
           <span className="text-[22px] tracking-wider -mt-[22px] opacity-90 font-light self-end mr-2">
             Frontend engineer
