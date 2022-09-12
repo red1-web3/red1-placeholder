@@ -30,7 +30,7 @@ body {
 }
 
 .__columnGrid {
-  @apply grid gap-28 grid-cols-2;
+  @apply grid gap-36 grid-cols-2;
 }
 
 ::-webkit-scrollbar {
