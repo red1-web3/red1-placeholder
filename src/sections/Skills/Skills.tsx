@@ -2,6 +2,9 @@ import gsap, { Back, Power4 } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import DesignIcon from "../../components/icons/DesignIcon";
 import Development from "../../components/icons/Development";
+import descFirstLogoText from "../../Gsap-Shorthand/descFirstLogoText";
+import learnMore from "../../Gsap-Shorthand/learnMore";
+import sectionTitle from "../../Gsap-Shorthand/sectionTitle";
 
 function Skills() {
   const [sectoinHeight, setSectoinHeight] = useState<number>(0);
@@ -12,68 +15,41 @@ function Skills() {
   }, [sectoinHeight]);
 
   useEffect(() => {
-    const scroll1 = gsap.timeline({
+    const scroll4 = gsap.timeline({
       scrollTrigger: {
-        trigger: "._skillsTitleTrigger",
-        start: "top 80%",
+        trigger: ".__skillImageFrameCont1",
+        start: "top 60%",
       },
     });
-    const scroll2 = gsap.timeline({
+    const scroll5 = gsap.timeline({
       scrollTrigger: {
-        trigger: "._skillTextTrigger",
-        start: "top 90%",
+        trigger: ".__skillImageFrameCont2",
+        start: "top 60%",
       },
     });
-    const scroll3 = gsap.timeline({
+
+    sectionTitle({
+      trigger: "._skillsTitleTrigger",
+      class: ".__skillsTitle",
+    }).to(
+      "._skillLearnMorex",
+      { opacity: 1, y: 0, ease: "back", stagger: { amount: 0.2 } },
+      "-=.3",
+    );
+
+    descFirstLogoText({
+      trigger: "._skillTextTrigger",
+      class1: ".__skillF1",
+      class2: ".__skillF2",
+      wrapperClass: ".__skillTextWrapper",
+    });
+    gsap.timeline({
       scrollTrigger: {
         trigger: ".__skillContainer",
         start: "top 60%",
         end: "bottom 20%",
         scrub: true,
       },
-    });
-    const scroll4 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".__skillImageFrameCont1",
-        start: "top 80%",
-      },
-    });
-    const scroll5 = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".__skillImageFrameCont2",
-        start: "top 80%",
-      },
-    });
-
-    scroll1.to(".__skillsTitle", {
-      y: 0,
-      duration: 0.5,
-      opacity: 1,
-      stagger: {
-        amount: 0.3,
-        ease: Power4.easeOut,
-      },
-    });
-    scroll2
-      .to(".__skillTextWrapper", { y: 0, ease: Power4.easeOut })
-      .to(".__skillF1", {
-        width: "80%",
-        ease: "back",
-        duration: 0.7,
-      })
-      .to(
-        ".__skillF2",
-        {
-          height: "70%",
-          ease: "back",
-          duration: 0.7,
-        },
-        "-=.5",
-      );
-
-    scroll3.to(".__skillLearnMore", {
-      ease: Power4.easeInOut,
-      height: "100%",
     });
 
     scroll4
@@ -97,20 +73,20 @@ function Skills() {
         ease: "back",
       });
     scroll5
+      .to(".__skillFrameSvgTopBottom2", {
+        width: "110%",
+        ease: Back.easeInOut.config(1.7),
+        duration: 1,
+      })
       .to(
-        ".__skillFrameSvgTopBottom2",
+        ".__skillFrameImageSvgRightLeft2",
         {
-          width: "110%",
+          height: "100%",
           ease: Back.easeInOut.config(1.7),
           duration: 1,
         },
         "-=.9",
       )
-      .to(".__skillFrameImageSvgRightLeft2", {
-        height: "100%",
-        ease: Back.easeInOut.config(1.7),
-        duration: 1,
-      })
       .to(".__skillFrameImageSvg2", {
         opacity: 1,
         y: 0,
@@ -146,6 +122,7 @@ function Skills() {
           ease: "back",
         },
       });
+    learnMore({ trigger: ".__skillContainer", class: ".__skillLearnMore" });
   }, []);
 
   return (
@@ -271,10 +248,10 @@ function Skills() {
         </div>
 
         <div className="flex items-center flex-col mt-[75px] relative _skillLearnMoreWrap">
-          <p className="rotate-90 font-second whitespace-pre absolute top-0 -left-10">
+          <p className="rotate-90 _skillLearnMorex font-second whitespace-pre absolute top-0 opacity-0 -translate-y-5 -left-10">
             Learn More
           </p>
-          <div className="__skillLearnMore h-0 mt-[70px] w-0.5 bg-black relative before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before::h-2 before:aspect-square before:rounded-full before:bg-black before:p-1.5"></div>
+          <div className="__skillLearnMore _skillLearnMorex opacity-0 -translate-y-5 h-0 mt-[70px] w-0.5 bg-black relative before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before::h-2 before:aspect-square before:rounded-full before:bg-black before:p-1.5"></div>
         </div>
       </div>
     </section>

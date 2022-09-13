@@ -1,51 +1,164 @@
+import gsap, { Power4 } from "gsap";
+import { useEffect } from "react";
 import { clientsData, jobCompanyName } from "../../constant";
+import descFirstLogoText from "../../Gsap-Shorthand/descFirstLogoText";
+import learnMore from "../../Gsap-Shorthand/learnMore";
 
 function Skills() {
+  useEffect(() => {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".__titleTxtTrigger",
+          start: "top 80%",
+        },
+      })
+      .to(".__historyTitleText", {
+        y: 0,
+        duration: 0.5,
+        stagger: {
+          amount: 0.3,
+          ease: Power4.easeOut,
+        },
+      })
+      .to(".__historyLearnMoreText", {
+        opacity: 1,
+        y: 0,
+        ease: "back",
+        stagger: { amount: 0.2 },
+      });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".__jobCompanyTrigger",
+          start: "top 60%",
+        },
+      })
+      .to(".__jobCompanyWrapper", { opacity: 1, y: 0, ease: "back" })
+      .to(".__jobcompanyName", {
+        y: 0,
+        opacity: 1,
+        ease: "back",
+        stagger: {
+          amount: 0.3,
+        },
+        duration: 0.7,
+      });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".__clientTrigger",
+          start: "top 65%",
+        },
+      })
+      .to(".__clientText", {
+        ease: "back",
+        y: 0,
+        opacity: 1,
+        stagger: {
+          amount: 0.3,
+        },
+      });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".__clientImageTrigger",
+          start: "top 60%",
+        },
+      })
+      .to(".__clientImages", {
+        opacity: 1,
+        scale: 1,
+        ease: "back",
+        stagger: {
+          amount: 0.5,
+          from: "start",
+        },
+      });
+
+    descFirstLogoText({
+      class1: ".__historyF1",
+      class2: ".__historyF2",
+      trigger: "._historyTextTrigger",
+      wrapperClass: ".__historyTextWrapper",
+    });
+
+    learnMore({
+      class: ".__historyLearnMoreHeight",
+      trigger: ".__historyContainer",
+    });
+  }, []);
+
   return (
     <section>
-      <div className="container flex justify-between">
+      <div className="container flex justify-between __historyContainer">
         <div className="flex items-center flex-col mt-[75px] relative">
-          <p className="rotate-90 font-second whitespace-pre absolute top-0 -left-10">
+          <p className="rotate-90 font-second whitespace-pre absolute top-0 -left-10  __historyLearnMoreText opacity-0 -translate-y-6">
             Learn More
           </p>
-          <div className="h-full w-0.5 mt-16 bg-black relative before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before::h-2 before:aspect-square before:rounded-full before:bg-black before:p-1.5"></div>
+          <div className="h-0 __historyLearnMoreHeight __historyLearnMoreText opacity-0 -translate-y-6 w-0.5 mt-[70px] bg-black relative before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before::h-2 before:aspect-square before:rounded-full before:bg-black before:p-1.5"></div>
         </div>
         <div className="space-y-5">
-          <h1 className="__titleTxt !text-[17rem]">History</h1>
+          <div className="__titleTxtTrigger">
+            <h1 className="__titleTxt !text-[17rem] overflow-hidden">
+              {[..."History"].map((letter, i) => (
+                <span
+                  key={i}
+                  className="__historyTitleText translate-y-full inline-block"
+                >
+                  {letter}
+                </span>
+              ))}
+            </h1>
+          </div>
 
           <div className="container-sm">
             <div className="flex items-end flex-col space-y-24">
-              <div className="space-y-5 w-[60%]">
-                <div className="flex items-center gap-5">
-                  <h2 className="text-7xl font-primary h-32 relative flex items-center justify-center aspect-square border-2 border-black leading-none">
-                    <span className="translate-y-1.5">F</span>
-                    <span className="absolute top-2.5 left-1/2 -translate-x-1/2 h-px bg-black inline-block w-[80%]"></span>
-                    <span className="absolute bottom-2.5 left-1/2 -translate-x-1/2 h-px bg-black inline-block w-[80%]"></span>
-                    <span className="absolute top-1/2 -translate-y-1/2 left-[calc(50%+5px)] bg-black inline-block h-px w-[70%] rotate-90"></span>
-                    <span className="absolute top-1/2 -translate-y-1/2 right-[calc(50%+5px)] bg-black inline-block h-px w-[70%] rotate-90"></span>
-                  </h2>
-                  <p className="font-primary text-2xl">
-                    or over a decade, I've worked in a variety of roles. My most
-                    recent interesting job was building a new design system &
-                    component library for one of my client project.
+              <div className="overflow-hidden">
+                <div className="space-y-5 w-[60%] __historyTextWrapper translate-y-full">
+                  <div className="flex items-center gap-5 _historyTextTrigger">
+                    <h2 className="text-7xl font-primary h-32 relative flex items-center justify-center aspect-square border-2 border-black leading-none">
+                      <span className="translate-y-1.5">F</span>
+                      <span className="absolute top-2.5 right-3 h-px bg-black inline-block w-0 __historyF1"></span>
+                      <span className="absolute bottom-2.5 left-3 h-px bg-black __historyF1 inline-block w-0"></span>
+                      <span className="absolute bottom-0 -translate-y-[18px] right-3.5 __historyF2 bg-black inline-block h-0 w-px"></span>
+                      <span className="absolute top-0 translate-y-[18px] left-3.5 __historyF2 bg-black inline-block w-px h-0"></span>
+                    </h2>
+                    <p className="font-primary text-2xl">
+                      or over a decade, I've worked in a variety of roles. My
+                      most recent interesting job was building a new design
+                      system & component library for one of my client project.
+                    </p>
+                  </div>
+                  <p className="font-second">
+                    Recently I learned some of new technology for animating
+                    website, the name are listed below.{" "}
+                    <strong>Green sock aniamtion</strong>,
+                    <strong>Three js</strong>, <strong>WebGl</strong>,
+                    <strong>Spline js 3D</strong>, <strong>Anime js</strong>
                   </p>
                 </div>
-                <p className="font-second">
-                  Recently I learned some of new technology for animating
-                  website, the name are listed below.{" "}
-                  <strong>Green sock aniamtion</strong>,
-                  <strong>Three js</strong>, <strong>WebGl</strong>,
-                  <strong>Spline js 3D</strong>, <strong>Anime js</strong>
-                </p>
               </div>
 
               <div className="__columnGrid w-full">
-                <div>
-                  <ul className="space-y-12">
+                <div className="__jobCompanyTrigger">
+                  <ul className="space-y-12 opacity-0 translate-y-8 __jobCompanyWrapper">
                     {jobCompanyName.map(({ comapany, date, role }, i) => (
                       <li key={i} className="flex justify-between items-end">
                         <div>
-                          <h3 className="font-primary text-3xl">{comapany}</h3>
+                          <h3 className="font-primary text-3xl overflow-hidden">
+                            {[...comapany].map((letter, i) => (
+                              <span
+                                key={i}
+                                className="inline-block whitespace-pre translate-y-full opacity-0 __jobcompanyName"
+                              >
+                                {letter}
+                              </span>
+                            ))}
+                          </h3>
                           <p className="font-second text-sm">{role}</p>
                         </div>
 
@@ -55,24 +168,31 @@ function Skills() {
                   </ul>
                 </div>
 
-                <div className="mt-28 space-y-12">
+                <div className="mt-28 space-y-12 __clientTrigger">
                   <div className="space-y-2">
-                    <h2 className="font-primary text-5xl">Clients</h2>
-                    <p className="text-xm font-second">
+                    <h2 className="font-primary text-5xl __clientText opacity-0 translate-y-8">
+                      Clients
+                    </h2>
+                    <p className="text-xm font-second __clientText opacity-0 translate-y-8">
                       I've been lucky to work with a real variety of clients
                       over the journey, I've listed some of the more notable
                       ones here.
                     </p>
                   </div>
-                  <ul className="grid grid-cols-3 gap-10">
-                    {clientsData.map(({ logo, text }, i) => {
-                      return (
-                        <li key={i}>
-                          <img src={logo} alt={text} />
-                        </li>
-                      );
-                    })}
-                  </ul>
+                  <div className="__clientImageTrigger">
+                    <ul className="grid grid-cols-3 gap-10">
+                      {clientsData.map(({ logo, text }, i) => {
+                        return (
+                          <li
+                            key={i}
+                            className="__clientImages inline-block opacity-0 scale-75"
+                          >
+                            <img src={logo} alt={text} />
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
