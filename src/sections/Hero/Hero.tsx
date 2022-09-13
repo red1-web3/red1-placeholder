@@ -48,9 +48,9 @@ function Hero() {
               <h2 className="text-7xl font-primary h-32 relative flex items-center justify-center aspect-square border-2 border-black leading-none">
                 <span className="translate-y-1.5">W</span>
                 <span className="absolute top-2.5 right-3 h-px bg-black inline-block w-0 __heroW1"></span>
-                <span className="absolute bottom-2.5 left-3 h-px bg-black __heroW3 inline-block w-0"></span>
-                <span className="absolute top-4.5 right-3.5 __heroW4 bg-black inline h-0 w-px"></span>
-                <span className="absolute bottom-4.5 left-3.5 __heroW2 bg-black inline w-px h-0"></span>
+                <span className="absolute bottom-2.5 left-3 h-px bg-black __heroW1 inline-block w-0"></span>
+                <span className="absolute bottom-0 -translate-y-[18px] right-3.5 __heroW2 bg-black inline h-0 w-px"></span>
+                <span className="absolute top-0 translate-y-[18px] left-3.5 __heroW2 bg-black inline w-px h-0"></span>
               </h2>
 
               <div className="font-primary text-2xl">

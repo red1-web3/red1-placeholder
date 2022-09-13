@@ -8,7 +8,7 @@ function OnLoadScreen() {
     onLoadTimeLine
       .to("._loaderBlackBackground", {
         top: "-100%",
-        duration: 2.5,
+        duration: 1.5,
       })
       .to("._loaderBlackBackground, ._loaderText", { opacity: 0 })
       .to(
@@ -92,16 +92,6 @@ function OnLoadScreen() {
         ".__heroW2",
         { height: "70%", ease: Back.easeInOut.config(1.7), duration: 0.7 },
         "-=1.6",
-      )
-      .to(
-        ".__heroW3",
-        { width: "80%", ease: Back.easeInOut.config(1.7), duration: 0.7 },
-        "-=1.5",
-      )
-      .to(
-        ".__heroW4",
-        { height: "70%", ease: Back.easeInOut.config(1.7), duration: 0.7 },
-        "-=1.4",
       )
       .to(
         ".__heroFrameTopBottom",
