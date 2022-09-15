@@ -6,7 +6,7 @@ function sectionTitle(props: SectionTitleProps) {
     .timeline({
       scrollTrigger: {
         trigger: props.trigger,
-        start: "top 40%",
+        start: "top 50%",
       },
     })
     .to(props.class, {

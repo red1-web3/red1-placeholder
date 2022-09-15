@@ -60,7 +60,7 @@ export const clientsData: ClientsData[] = [
 export const sliderData: SiderData[] = [
   {
     image: "/websiteDemo/devOps.png",
-    url: "#",
+    url: "https://dev-ops-landing-page.vercel.app/",
   },
   {
     image: "/websiteDemo/devOps.png",

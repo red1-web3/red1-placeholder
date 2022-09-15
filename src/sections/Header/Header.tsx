@@ -1,9 +1,9 @@
 function Header() {
   return (
-    <header className="font-primary py-5">
-      <div className="container flex items-center justify-between">
-        <div className="flex flex-col items-center">
-          <a href="#" className="text-[44px] tracking-wide">
+    <header className="font-primary py-3 md:py-5">
+      <div className="container flex items-center justify-between w-full">
+        <a href="#" className="flex flex-col gap-1 md:gap-0 items-center">
+          <div className="text-[34px] md:text-[44px] tracking-wide">
             {[..."Red1 Placeholder"].map((letter, i) => (
               <span
                 key={i}
@@ -12,8 +12,8 @@ function Header() {
                 {letter}
               </span>
             ))}
-          </a>
-          <span className="text-[22px] tracking-wider -mt-[22px] opacity-90 font-light self-end mr-2">
+          </div>
+          <span className="text-[20px] md:text-[22px] tracking-wider -mt-[22px] opacity-90 font-light self-end mr-2">
             {[..."Frontend engineer"].map((letter, i) => (
               <span
                 key={i}
@@ -23,10 +23,18 @@ function Header() {
               </span>
             ))}
           </span>
-        </div>
+        </a>
+        {/* Mobile nav --Start-- */}
+        <nav className="shrink md:hidden">
+          <button className="w-8 relative h-[16px] __menuEffect -translate-y-12 opacity-0">
+            <span className="absolute inline-block top-0 left-0 w-full h-0.5 bg-black"></span>
+            <span className="absolute inline-block bottom-0 left-0 w-full h-0.5 bg-black"></span>
+          </button>
+        </nav>
+        {/* Mobile nav --End-- */}
 
-        <nav>
-          <ul className="flex items-center justify-center gap-3 text-2xl">
+        <nav className="hidden md:block">
+          <ul className="items-center justify-center gap-3 text-2xl flex">
             <li className="relative __navigationEffect -translate-y-12 opacity-0 __navigationEffectGsap1">
               <a href="#">Writing</a>
             </li>

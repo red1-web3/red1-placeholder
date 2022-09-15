@@ -3,9 +3,9 @@ import HeroIcon from "../../components/icons/HeroIcon";
 function Hero() {
   return (
     <section className="h-full">
-      <div className="container grid gap-28 grid-cols-[460px,480px]">
-        <div className="flex gap-14">
-          <ul className="space-y-1.5">
+      <div className="container grid gap-16 md:gap-28 grid-cols-1 md:grid-cols-2 lg::grid-cols-[460px,480px]">
+        <div className="flex flex-row md:flex-col lg:flex-row gap-14 order-2 md:order-none">
+          <ul className="space-y-1.5 hidden md:block">
             <li
               style={{ fontFamily: "cursive" }}
               className="__navigationEffectGsap2 -translate-x-12 opacity-0 text-[#222] !mb-3"
@@ -42,16 +42,16 @@ function Hero() {
           </div>
         </div>
 
-        <article className="flex items-end __heroTxtWrapper opacity-0 translate-y-6">
+        <article className="flex items-end __heroTxtWrapper opacity-0 translate-y-6 order-1 md:order-none">
           <div className="flex flex-col gap-5 md:-translate-y-4">
-            <div className="flex items-center gap-5">
-              <h2 className="text-7xl font-primary h-32 relative flex items-center justify-center aspect-square border-2 border-black leading-none">
+            <div className="flex items-start translate-y-2 lg:translate-y-0 lg:items-center gap-5">
+              <span className="text-7xl font-primary h-32 relative inline-flex items-center justify-center aspect-square border-2 border-black leading-none">
                 <span className="translate-y-1.5">W</span>
                 <span className="absolute top-2.5 right-3 h-px bg-black inline-block w-0 __heroW1"></span>
                 <span className="absolute bottom-2.5 left-3 h-px bg-black __heroW1 inline-block w-0"></span>
                 <span className="absolute bottom-0 -translate-y-[18px] right-3.5 __heroW2 bg-black inline h-0 w-px"></span>
                 <span className="absolute top-0 translate-y-[18px] left-3.5 __heroW2 bg-black inline w-px h-0"></span>
-              </h2>
+              </span>
 
               <div className="font-primary text-2xl">
                 elcome! I'm Red1 — a frontend engineer and coder who creates

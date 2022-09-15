@@ -1,4 +1,4 @@
-import gsap, { Back, Power4 } from "gsap";
+import gsap, { Back, Power4, Power2 } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import DesignIcon from "../../components/icons/DesignIcon";
 import Development from "../../components/icons/Development";
@@ -106,6 +106,20 @@ function Skills() {
           amount: 0.2,
           ease: "back",
         },
+      })
+      .to(".__humanDesign", {
+        scale: 1.3,
+        stagger: 0.1,
+        ease: "back",
+        duration: 0.3,
+        letterSpacing: 20,
+      })
+      .to(".__humanDesign", {
+        scale: 1,
+        stagger: 0.1,
+        ease: "back",
+        duration: 0.3,
+        letterSpacing: 0,
       });
     gsap
       .timeline({
@@ -140,10 +154,10 @@ function Skills() {
             ))}
           </h1>
 
-          <div className="container-sm space-y-24">
+          <div className="container-sm space-y-16 md:space-y-20 lg:space-y-24">
             <div className="overflow-hidden">
-              <div className="space-y-5 w-[60%] translate-y-full __skillTextWrapper">
-                <div className="flex items-center gap-5 _skillTextTrigger">
+              <div className="space-y-5 md:w-[60%] translate-y-full __skillTextWrapper">
+                <div className="flex items-start md:items-center gap-5 _skillTextTrigger">
                   <h2 className="text-7xl font-primary h-32 relative flex items-center justify-center aspect-square border-2 border-black leading-none">
                     <span className="translate-y-1.5">F</span>
                     <span className="absolute top-2.5 right-3 h-px bg-black inline-block w-0 __skillF1"></span>
@@ -200,12 +214,19 @@ function Skills() {
                     prototyping directly in a web browser. I'm passionate about
                     interaction animations.
                     <br /> <br />
-                    <strong> Humane by Design</strong> is a real guiding force
-                    for the design work I do.
+                    <strong>
+                      {" "}
+                      <span className="__humanDesign inline-block">
+                        Humane
+                      </span>{" "}
+                      <span className="__humanDesign inline-block">by</span>{" "}
+                      <span className="__humanDesign inline-block">Design</span>
+                    </strong>{" "}
+                    is a real guiding force for the design work I do.
                   </p>
                 </div>
               </div>
-              <div className="space-y-5 mt-28 __skillImageFrameCont2">
+              <div className="space-y-5 md:mt-28 __skillImageFrameCont2">
                 <div className="flex items-center flex-col justify-center grow">
                   <span className="self-start font-second text-sm mb-2 opacity-0 __skillFrameImageSvg -translate-y-6">
                     Fig 3.
@@ -247,7 +268,7 @@ function Skills() {
           </div>
         </div>
 
-        <div className="flex items-center flex-col mt-[75px] relative _skillLearnMoreWrap">
+        <div className="items-center flex-col mt-[75px] relative _skillLearnMoreWrap hidden md:flex">
           <p className="rotate-90 _skillLearnMorex font-second whitespace-pre absolute top-0 opacity-0 -translate-y-5 -left-10">
             Learn More
           </p>

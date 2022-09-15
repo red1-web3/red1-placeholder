@@ -13,7 +13,7 @@ export default function App() {
         effect={"cards"}
         // grabCursor={true}
         modules={[EffectCards, Autoplay]}
-        className="mySwiper w-[700px]"
+        className="mySwiper md:w-[700px]"
         // autoplay={{
         //   delay: 2000,
         //   disableOnInteraction: false,
@@ -23,10 +23,10 @@ export default function App() {
         {sliderData.map(({ image, url }, i) => {
           return (
             <SwiperSlide key={i}>
-              <div className="border-2 border-[#F5E4BC] relative">
-                <a href={url}>
+              <div className="border-2 border-[#F5E4BC] overflow-hidden">
+                <a href={url} className="group">
                   <img
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-cover duration-[400ms] ease-out"
                     src={image}
                     alt="Slider image"
                   />
