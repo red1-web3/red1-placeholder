@@ -1,4 +1,8 @@
 import { ClientsData, JobCompanyName, SiderData } from "../types";
+import devOps from "../../public/websiteDemo/devOps.png";
+import netflix from "../../public/websiteDemo/netflix.png";
+import airport from "../../public/websiteDemo/airport-transfer.png";
+import outside from "../../public/websiteDemo/outside.png";
 
 export const jobCompanyName: JobCompanyName[] = [
   {
@@ -59,43 +63,19 @@ export const clientsData: ClientsData[] = [
 
 export const sliderData: SiderData[] = [
   {
-    image: "/websiteDemo/devOps.png",
+    image: devOps,
     url: "https://dev-ops-landing-page.vercel.app/",
   },
   {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
+    image: netflix,
+    url: "netflix-six-tau.vercel.app",
   },
   {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
+    image: airport,
+    url: "https://airport-transfer-six.vercel.app",
   },
   {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
-  },
-  {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
-  },
-  {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
-  },
-  {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
-  },
-  {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
-  },
-  {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
-  },
-  {
-    image: "/websiteDemo/devOps.png",
-    url: "#",
+    image: outside,
+    url: "https://outside-yacht-club.vercel.app",
   },
 ];

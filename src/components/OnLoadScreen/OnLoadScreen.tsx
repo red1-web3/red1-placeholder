@@ -131,13 +131,13 @@ function OnLoadScreen() {
 
   return (
     <div className="fixed top-0 left-0 w-screen h-screen z-[2] flex items-center justify-center __loaderMainOverlay">
-      <div className="font-title text-5xl !text-black md:text-[#F5E4BC] relative z-[2]">
+      <div className="font-title text-5xl !text-black md:!text-[#F5E4BC] relative z-[2]">
         <span className="_loaderText">R1</span>
-        <span className="absolute top-0 left-0 h-full md:w-full lg:bg-black _loaderBlackBackground"></span>
+        <span className="absolute top-0 left-0 h-full md:w-full lg:bg-black scale-90 _loaderBlackBackground"></span>
       </div>
 
       <div className="absolute top-0 left-0 w-full">
-        <div className="h-screen  grid-cols-[repeat(33,1fr)] hidden lg:grid">
+        <div className="h-screen  grid-cols-[repeat(33,1fr)] gap-0.5 hidden lg:grid">
           {[...Array(495).keys()].map((number) => (
             <span
               key={number}
