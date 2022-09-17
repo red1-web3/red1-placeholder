@@ -35,11 +35,11 @@ function Skills() {
       })
       .to(".__showcaseSlider", {
         y: 0,
-        ease: Elastic.easeOut.config(1, 0.3),
+        ease: "back",
         delay: 0.3,
-        duration: 3,
+        duration: 1,
       })
-      .to(".__showcaseDemoTitle", { opacity: 1 }, "-=1");
+      .to(".__showcaseDemoTitle", { opacity: 1 }, "-=.6");
   }, []);
   return (
     <section>

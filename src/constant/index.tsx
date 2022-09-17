@@ -1,5 +1,5 @@
 import { ClientsData, JobCompanyName, SiderData } from "../types";
-import devOps from "/websiteDemo/devOps.png";
+// import devOps from "/websiteDemo/devOps.png";
 import netflix from "/websiteDemo/netflix.png";
 import airport from "/websiteDemo/airport-transfer.png";
 import outside from "/websiteDemo/outside.png";
@@ -62,10 +62,10 @@ export const clientsData: ClientsData[] = [
 ];
 
 export const sliderData: SiderData[] = [
-  {
-    image: devOps,
-    url: "https://dev-ops-landing-page.vercel.app/",
-  },
+  // {
+  //   image: devOps,
+  //   url: "https://dev-ops-landing-page.vercel.app/",
+  // },
   {
     image: netflix,
     url: "netflix-six-tau.vercel.app",
