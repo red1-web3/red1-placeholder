@@ -27,7 +27,7 @@ function App() {
         <Skills />
         <History />
         <Warning />
-        <Showcase />
+        {/* <Showcase /> */}
         <Footer />
       </div>
     </>
