@@ -1,8 +1,8 @@
 import { ClientsData, JobCompanyName, SiderData } from "../types";
-import devOps from "../../public/websiteDemo/devOps.png";
-import netflix from "../../public/websiteDemo/netflix.png";
-import airport from "../../public/websiteDemo/airport-transfer.png";
-import outside from "../../public/websiteDemo/outside.png";
+import devOps from "/websiteDemo/devOps.png";
+import netflix from "/websiteDemo/netflix.png";
+import airport from "/websiteDemo/airport-transfer.png";
+import outside from "/websiteDemo/outside.png";
 
 export const jobCompanyName: JobCompanyName[] = [
   {
