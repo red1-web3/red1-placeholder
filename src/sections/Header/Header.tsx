@@ -1,4 +1,9 @@
+import classNames from "classnames";
+import { useState } from "react";
+
 function Header() {
+  const [activeMobileNav, setActiveMobileNav] = useState(false);
+
   return (
     <header className="font-primary py-3 md:py-5">
       <div className="container flex items-center justify-between w-full">
@@ -25,11 +30,38 @@ function Header() {
           </span>
         </a>
         {/* Mobile nav --Start-- */}
-        <nav className="shrink md:hidden">
-          <button className="w-8 relative h-[16px] __menuEffect -translate-y-12 opacity-0">
-            <span className="absolute inline-block top-0 left-0 w-full h-0.5 bg-black"></span>
-            <span className="absolute inline-block bottom-0 left-0 w-full h-0.5 bg-black"></span>
+        <nav className="shrink md:hidden relative">
+          <button
+            onClick={() => setActiveMobileNav((prev) => !prev)}
+            className="w-8 relative h-[16px] __menuEffect -translate-y-12 opacity-0 z-[11]"
+          >
+            <span
+              className={classNames(
+                "absolute inline-block duration-500 ease-out top-0 left-0 w-full h-0.5 bg-black",
+                activeMobileNav && "rotate-45 top-1/2 -translate-y-1/2",
+              )}
+            ></span>
+            <span
+              className={classNames(
+                "absolute inline-block duration-500 ease-out bottom-0 left-0 w-full h-0.5 bg-black",
+                activeMobileNav && "-rotate-45 top-1/2 -translate-y-1/2",
+              )}
+            ></span>
           </button>
+
+          <ul
+            className={classNames(
+              "scale-0 duration-200 ease-out -translate-y-14 translate-x-28 justify-center gap-3 w-[300px] z-[10] text-2xl flex flex-col bg-[#d4bf8e] shadow pb-5 pl-5 pt-10 pr-10 absolute -top-1 -right-2",
+              activeMobileNav && "scale-100 translate-x-0 translate-y-0",
+            )}
+          >
+            <li className="relative text-4xl">
+              <a href="#">Writing</a>
+            </li>
+            <li className="relative text-4xl">
+              <a href="#">Contact</a>
+            </li>
+          </ul>
         </nav>
         {/* Mobile nav --End-- */}
 

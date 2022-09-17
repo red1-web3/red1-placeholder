@@ -20,13 +20,16 @@ body {
   .container-sm {
     @apply px-6 lg:px-0 md:w-[800px] lg:w-[900px] lg:mx-auto;
   }
+}
+
+@layer utilities {
   .__navigationEffect {
     @apply px-4 tracking-wider before:absolute before:top-1/2 before:-translate-y-1/2 before:-left-8 before:w-[6px] before:opacity-0 hover:before:left-0 before:duration-300 before:ease-out hover:before:opacity-100 before:aspect-square before:rounded-full before:bg-black;
   }
 }
 
 .__titleTxt {
-  @apply leading-none uppercase font-title text-[7.5rem] md:text-[16rem] lg:text-[22rem] text-[#292823] tracking-tight;
+  @apply leading-none whitespace-pre uppercase font-title text-[7rem] md:text-[16rem] lg:text-[22rem] text-[#292823] tracking-tight;
 }
 
 .__columnGrid {

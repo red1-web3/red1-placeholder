@@ -43,7 +43,7 @@ function Skills() {
     <section>
       <div className="container flex justify-between">
         <div className="space-y-5">
-          <h1 className="__warningTitleText overflow-hidden !text-[5.1rem] md:!text-[10.7rem] lg:!text-[15rem] __titleTxt">
+          <h1 className="__warningTitleText overflow-hidden !text-[4.8rem] md:!text-[10.7rem] lg:!text-[15rem] __titleTxt">
             {[..."Warning"].map((letter, i) => (
               <span
                 key={i}
