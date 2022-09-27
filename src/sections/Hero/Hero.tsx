@@ -13,13 +13,25 @@ function Hero() {
               External
             </li>
             <li className="__navigationEffectGsap2 -translate-x-12 opacity-0 font-primary tracking-wider text-xl relative __navigationEffect">
-              <a href="#">Facebook</a>
+              <a target="blank" href="https://www.facebook.com/redsam.23">
+                Facebook
+              </a>
             </li>
             <li className="__navigationEffectGsap2 -translate-x-12 opacity-0 font-primary tracking-wider text-xl relative __navigationEffect">
-              <a href="#">Instagram</a>
+              <a
+                target="blank"
+                href="https://instagram.com/red1.amir?igshid=YmMyMTA2M2Y="
+              >
+                Instagram
+              </a>
             </li>
             <li className="__navigationEffectGsap2 -translate-x-12 opacity-0 font-primary tracking-wider text-xl relative __navigationEffect">
-              <a href="#">Youtube</a>
+              <a
+                target="blank"
+                href="https://www.youtube.com/c/RedSamTheNightmare"
+              >
+                Youtube
+              </a>
             </li>
           </ul>
 
