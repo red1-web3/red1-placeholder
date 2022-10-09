@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         primary: ["Aladin", "cursive"],
-        second: ["cursive"],
+        second: ["Arima", "cursive"],
         title: ["Bulu-title", "cursive"],
       },
     },

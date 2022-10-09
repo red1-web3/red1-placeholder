@@ -136,7 +136,7 @@ function OnLoadScreen() {
       </div>
 
       <div className="absolute top-0 left-0 w-full">
-        <div className="h-screen  grid-cols-[repeat(33,1fr)] gap-px hidden lg:grid">
+        <div className="h-screen  grid-cols-[repeat(33,1fr)] hidden lg:grid">
           {[...Array(495).keys()].map((number) => (
             <span
               key={number}
