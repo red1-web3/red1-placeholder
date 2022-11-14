@@ -8,7 +8,7 @@ function learnMore(props: LearnMoreProps) {
         trigger: props.trigger,
         start: "top 60%",
         end: "bottom 20%",
-        scrub: true,
+        scrub: 1,
       },
     })
     .to(props.class, {

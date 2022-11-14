@@ -59,7 +59,7 @@ function Skills() {
               <div className="space-y-5 md:w-[60%] translate-y-full __historyDescWrapper">
                 <div className="flex items-start md:items-center gap-5 __historyDescTrigger">
                   <h2 className="text-7xl font-primary h-32 relative flex items-center justify-center aspect-square border-2 border-black leading-none">
-                    <span className="translate-y-1.5">F</span>
+                    <span className="translate-y-1.5">E</span>
                     <span className="absolute top-2.5 right-3 h-px bg-black inline-block w-0 __historyE1"></span>
                     <span className="absolute bottom-2.5 left-3 h-px bg-black __historyE1 inline-block w-0"></span>
                     <span className="absolute bottom-0 -translate-y-[18px] right-3.5 __historyE2 bg-black inline-block h-0 w-px"></span>
