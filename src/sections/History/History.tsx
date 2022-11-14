@@ -99,7 +99,7 @@ function Skills() {
           <div className="h-0 __historyLearnMoreHeight __historyLearnMoreText opacity-0 -translate-y-6 w-0.5 mt-[70px] bg-black relative before:absolute before:bottom-0 before:left-1/2 before:-translate-x-1/2 before::h-2 before:aspect-square before:rounded-full before:bg-black before:p-1.5"></div>
         </div>
         <div className="space-y-5 __titleTxtTrigger">
-          <h1 className="__titleTxt !text-[5.5rem] md:!text-[12rem] lg:!text-[17rem] overflow-hidden">
+          <h1 className="__titleTxt !text-[80px] md:!text-[12rem] lg:!text-[17rem] overflow-hidden">
             {[..."History"].map((letter, i) => (
               <span
                 key={i}

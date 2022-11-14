@@ -30,7 +30,7 @@ body {
 }
 
 .__titleTxt {
-  @apply leading-none whitespace-pre uppercase font-title text-[7rem] md:text-[16rem] lg:text-[22rem] text-[#292823] tracking-tight;
+  @apply leading-none whitespace-pre uppercase font-title text-[105px] md:text-[16rem] lg:text-[22rem] text-[#292823] tracking-tight;
 }
 
 .__columnGrid {

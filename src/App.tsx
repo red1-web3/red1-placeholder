@@ -21,7 +21,7 @@ function App() {
   return (
     <>
       <OnLoadScreen />
-      <div className="space-y-28 lg:space-y-36">
+      <div className="space-y-14 md:space-y-[72px] lg:space-y-36">
         <HeaderAndHero />
         <Skills />
         <History />
