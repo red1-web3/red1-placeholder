@@ -14,7 +14,7 @@ function App() {
   useEffect(() => {
     const endTimeOut = setTimeout(() => {
       window.scrollTo(0, 0);
-    }, 1000);
+    }, 200);
 
     return () => clearTimeout(endTimeOut);
   }, []);

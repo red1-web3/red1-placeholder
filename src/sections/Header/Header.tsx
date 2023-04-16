@@ -33,33 +33,41 @@ function Header() {
         <nav className="shrink md:hidden relative">
           <button
             onClick={() => setActiveMobileNav((prev) => !prev)}
-            className="w-8 relative h-[16px] __menuEffect -translate-y-12 opacity-0 z-[11]"
+            className="focus:border-2 focus:border-[#ecc979] focus:box-border focus:border-dashed h-[46px] aspect-square flex items-center justify-center relative z-[20]"
           >
-            <span
-              className={classNames(
-                "absolute inline-block duration-500 ease-out top-0 left-0 w-full h-0.5 bg-black",
-                activeMobileNav && "rotate-45 top-1/2 -translate-y-1/2",
-              )}
-            ></span>
-            <span
-              className={classNames(
-                "absolute inline-block duration-500 ease-out bottom-0 left-0 w-full h-0.5 bg-black",
-                activeMobileNav && "-rotate-45 top-1/2 -translate-y-1/2",
-              )}
-            ></span>
+            <div className="w-6 relative h-[16px] __menuEffect -translate-y-12 opacity-0 z-[11]">
+              <span
+                className={classNames(
+                  "absolute inline-block duration-100 ease-out top-[10%] left-0 w-full h-0.5 bg-black",
+                  activeMobileNav &&
+                    "rotate-45 !top-1/2 -translate-y-1/2 bg-primary"
+                )}
+              ></span>
+              <span
+                className={classNames(
+                  "absolute inline-block duration-100 ease-out bottom-[10%] left-0 w-full h-0.5 bg-black",
+                  activeMobileNav &&
+                    "-rotate-45 !top-1/2 -translate-y-1/2 bg-primary"
+                )}
+              ></span>
+            </div>
           </button>
 
           <ul
             className={classNames(
-              "scale-0 duration-200 ease-out -translate-y-14 translate-x-28 justify-center gap-3 w-[300px] z-[10] text-2xl flex flex-col bg-[#d4bf8e] shadow pb-5 pl-5 pt-10 pr-10 absolute -top-1 -right-2",
-              activeMobileNav && "scale-100 translate-x-0 translate-y-0",
+              "scale-0 origin-top-right duration-100 ease-out items-center justify-center gap-3 w-[230px] aspect-square z-[10] text-2xl flex flex-col bg-[#292823] shadow pb-5 pl-5 pt-10 pr-10 absolute top-0.5 right-0.5",
+              activeMobileNav && "scale-100 translate-x-0 translate-y-0"
             )}
           >
-            <li className="relative text-4xl">
-              <a href="#">Writing</a>
+            <li className="relative text-4xl text-primary">
+              <a href="#" className="tracking-wider">
+                Writing
+              </a>
             </li>
-            <li className="relative text-4xl">
-              <a href="#">Contact</a>
+            <li className="relative text-4xl text-primary">
+              <a href="#" className="tracking-wider">
+                Contact
+              </a>
             </li>
           </ul>
         </nav>

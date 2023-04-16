@@ -1,8 +1,8 @@
 import gsap, { Power4 } from "gsap";
 import { useEffect } from "react";
 import { clientsData, jobCompanyName } from "../../constant";
-import descFirstLogoText from "../../Gsap-Shorthand/descFirstLogoText";
-import learnMore from "../../Gsap-Shorthand/learnMore";
+import descFirstLogoText from "../../gsapShorthand/descFirstLogoText";
+import learnMore from "../../gsapShorthand/learnMore";
 
 function Skills() {
   useEffect(() => {

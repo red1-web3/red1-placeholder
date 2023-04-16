@@ -8,6 +8,9 @@ module.exports = {
         second: ["Arima", "cursive"],
         title: ["Bulu-title", "cursive"],
       },
+      colors: {
+        primary: "#F5E4BC",
+      },
     },
   },
   plugins: [],

@@ -2,9 +2,9 @@ import gsap, { Back, Power4, Power2 } from "gsap";
 import { useEffect, useRef, useState } from "react";
 import DesignIcon from "../../components/icons/DesignIcon";
 import Development from "../../components/icons/Development";
-import descFirstLogoText from "../../Gsap-Shorthand/descFirstLogoText";
-import learnMore from "../../Gsap-Shorthand/learnMore";
-import sectionTitle from "../../Gsap-Shorthand/sectionTitle";
+import descFirstLogoText from "../../gsapShorthand/descFirstLogoText";
+import learnMore from "../../gsapShorthand/learnMore";
+import sectionTitle from "../../gsapShorthand/sectionTitle";
 
 function Skills() {
   const [sectoinHeight, setSectoinHeight] = useState<number>(0);
@@ -34,7 +34,7 @@ function Skills() {
     }).to(
       "._skillLearnMorex",
       { opacity: 1, y: 0, ease: "back", stagger: { amount: 0.2 } },
-      "-=.3",
+      "-=.3"
     );
 
     descFirstLogoText({
@@ -65,7 +65,7 @@ function Skills() {
           ease: Back.easeInOut.config(1.7),
           duration: 1,
         },
-        "-=.9",
+        "-=.9"
       )
       .to(".__skillFrameImageSvg1", {
         opacity: 1,
@@ -85,7 +85,7 @@ function Skills() {
           ease: Back.easeInOut.config(1.7),
           duration: 1,
         },
-        "-=.9",
+        "-=.9"
       )
       .to(".__skillFrameImageSvg2", {
         opacity: 1,

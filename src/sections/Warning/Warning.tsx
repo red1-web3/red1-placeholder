@@ -1,8 +1,8 @@
 import gsap from "gsap";
 import { useEffect } from "react";
-import descFirstLogoText from "../../Gsap-Shorthand/descFirstLogoText";
-import learnMore from "../../Gsap-Shorthand/learnMore";
-import sectionTitle from "../../Gsap-Shorthand/sectionTitle";
+import descFirstLogoText from "../../gsapShorthand/descFirstLogoText";
+import learnMore from "../../gsapShorthand/learnMore";
+import sectionTitle from "../../gsapShorthand/sectionTitle";
 
 function Skills() {
   useEffect(() => {
