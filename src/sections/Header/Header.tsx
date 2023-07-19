@@ -55,7 +55,7 @@ function Header() {
 
           <ul
             className={classNames(
-              "scale-0 origin-top-right duration-100 ease-out items-center justify-center gap-3 w-[230px] aspect-square z-[10] text-2xl flex flex-col bg-[#292823] shadow pb-5 pl-5 pt-10 pr-10 absolute top-0.5 right-0.5",
+              "scale-0 origin-top-right duration-100 ease-out items-center justify-center w-[230px] aspect-square z-[10] text-2xl flex flex-col bg-[#292823] shadow pb-5 pl-5 pt-10 pr-10 absolute top-0.5 right-0.5 gap-5",
               activeMobileNav && "scale-100 translate-x-0 translate-y-0"
             )}
           >

@@ -7,8 +7,7 @@ function learnMore(props: LearnMoreProps) {
       scrollTrigger: {
         trigger: props.trigger,
         start: "top 60%",
-        end: "bottom 20%",
-        scrub: 1,
+        scrub: true,
       },
     })
     .to(props.class, {
