@@ -73,7 +73,10 @@ function Skills() {
         opacity: 1,
         scale: 1,
         ease: "back",
-        stagger: 0.2,
+        stagger: {
+          each: 0.1,
+          from: "center",
+        },
       });
 
     descFirstLogoText({

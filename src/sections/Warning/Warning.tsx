@@ -33,7 +33,7 @@ function Skills() {
         y: 0,
         opacity: 1,
         stagger: {
-          amount: 0.2,
+          amount: 0.1,
           ease: "back",
         },
       });

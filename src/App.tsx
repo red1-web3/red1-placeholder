@@ -1,3 +1,5 @@
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
 import HeaderAndHero from "./components/HeaderAndHero";
 import OnLoadScreen from "./components/OnLoadScreen";
@@ -5,11 +7,8 @@ import Footer from "./sections/Footer";
 import History from "./sections/History";
 import Skills from "./sections/Skills";
 import Warning from "./sections/Warning";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
-
 function App() {
   useEffect(() => {
     const endTimeOut = setTimeout(() => {

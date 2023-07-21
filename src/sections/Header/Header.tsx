@@ -40,14 +40,14 @@ function Header() {
                 className={classNames(
                   "absolute inline-block duration-100 ease-out top-[10%] left-0 w-full h-0.5 bg-black",
                   activeMobileNav &&
-                    "rotate-45 !top-1/2 -translate-y-1/2 bg-primary"
+                    "rotate-45 !top-1/2 -translate-y-1/2 !bg-primary"
                 )}
               ></span>
               <span
                 className={classNames(
                   "absolute inline-block duration-100 ease-out bottom-[10%] left-0 w-full h-0.5 bg-black",
                   activeMobileNav &&
-                    "-rotate-45 !top-1/2 -translate-y-1/2 bg-primary"
+                    "-rotate-45 !top-1/2 -translate-y-1/2 !bg-primary"
                 )}
               ></span>
             </div>
